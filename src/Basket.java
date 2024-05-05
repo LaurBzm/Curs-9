@@ -1,9 +1,5 @@
-import Basket.java.fruitBasket;
-
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
 import java.util.stream.IntStream;
 
 public class Basket<Property> {
@@ -52,9 +48,51 @@ public class Basket<Property> {
 
                 for (int i : linkedHashSet) {
                     System.out.println(i);
+                    fruitBasket = new String(", ");
+
+                    fruitBasket.indexOf("Mar");
+                    fruitBasket.indexOf("Portocala");
+                    fruitBasket.indexOf("Banana");
+
+                    assertEquals("Mar, Portocala, Banana", fruitBasket.toString());
                 }
 
             }
+
+            private static void assertEquals(String s, String string) {
+            }
         }
+    }
+}
+class Count {
+
+    public static void main(String[] args) {
+
+        int count = 0, num = 3;
+
+        while (num != 0) {
+            // num = num/3
+            num /= 3;
+            ++count;
+        }
+
+        System.out.println("Fructe" + count);
+    }
+}
+class customCount {
+    private int value;
+    private int min;
+    private int max;
+
+
+    customCount() {
+    }
+    customCount(int value) {
+        this.value = value;
+    }
+    customCount(int value, int min, int max) {
+        this.value = value;
+        this.min = min;
+        this.max = max;
     }
 }
